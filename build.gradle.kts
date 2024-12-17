@@ -20,10 +20,10 @@ sonarqube {
     properties {
         property("sonar.projectKey", "R507")
         property("sonar.projectName", "R507")
-        property("sonar.sources", "src/main/java/org.example")
+        property("sonar.sources", "src/main/java")
         property("sonar.host.url", "http://localhost:9000")
-        property("sonar.token", "sqp_0fd1c6ffd81a5d6142f394f25994824f6ae961bf")
-        property("sonar.java.binaries", "build/classes/java/main/org/example")
+        property("sonar.token", "sqp_213d6ed17bc92feeb2d7585d977ec3f13e7f9783")
+        property("sonar.java.binaries", "build/classes/java/main")
     }
 }
 
