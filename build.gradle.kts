@@ -1,6 +1,7 @@
 plugins {
     id("java")
     id("org.sonarqube") version "5.1.0.4882"
+    jacoco
 }
 
 group = "org.example"
@@ -29,4 +30,16 @@ sonarqube {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+tasks.jacocoTestReport {
+    dependsOn(tasks.test)
+    reports {
+        xml.required.set(true)
+        html.required.set(true)
+    }
+}
+
+tasks.build {
+    dependsOn(tasks.jacocoTestReport)
 }
